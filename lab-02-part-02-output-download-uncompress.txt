@@ -18,7 +18,7 @@ $ echo hello
 
 Copy and paste the output below.
 ----------
-
+Hello
 
 
 ==========
@@ -28,7 +28,7 @@ $ echo hello there
 
 Copy and paste the output below.
 ----------
-
+hello there
 
 
 ==========
@@ -39,6 +39,8 @@ $ echo good mornin'
 Copy and paste the output below.
 ----------
 
+student$ echo good mornin'
+> 
 
 
 ==========
@@ -57,7 +59,7 @@ $ echo "good mornin'"
 Copy and paste the output below.
 ----------
 
-
+good mornin'
 
 ==========
 6. There are some other symbols that have special meanings if you don't quote them.  For example, > brings up a different prompt.  Try *.
@@ -66,7 +68,7 @@ $ echo *
 
 What happens?
 ----------
-
+Adlm Adobe Applications DANK Desktop Documents Downloads E Library M MPLABXProjects Movies Music New Unity Project Pictures Public QLData S Things cert.pem ipe.properties isus key.pem more-stuff mtec1002 mtec1003-lab-03 mtec1003-lab-03.tar.gz pymel.log stuff testjp.zip.tar xgen
 
 
 ==========
@@ -74,8 +76,7 @@ What happens?
 
 Write the command that you used below:
 ----------
-
-
+clear
 
 ==========
 We're going to practice downloading files from a web site.  We'll use this practice to download more lab materials!
@@ -87,6 +88,12 @@ $ curl google.com
 
 Copy and paste the output below.
 ----------
+<HTML><HEAD><meta http-equiv="content-type" content="text/html;charset=utf-8">
+<TITLE>301 Moved</TITLE></HEAD><BODY>
+<H1>301 Moved</H1>
+The document has moved
+<A HREF="http://www.google.com/">here</A>.
+</BODY></HTML>
 
 
 
@@ -95,9 +102,9 @@ Copy and paste the output below.
 
 $ curl www.google.com
 
-Copy and paste the output below, but not the whole thing!  Just copy up to the part that has the title tags (<title>......</title>).
+Copy and paste the output below, but not the whole thing!  Just copy up to the part that has the title tags (<title>.....</title>).
 ----------
-
+<!doctype html><html itemscope="" itemtype="http://schema.org/WebPage" lang="en"><head><meta content="Search the world's information, including webpages, images, videos and more. Google has many special features to help you find exactly what you're looking for." name="description"><meta content="noodp" name="robots"><meta content="text/html; charset=UTF-8" http-equiv="Content-Type"><meta content="/images/branding/googleg/1x/googleg_standard_color_128dp.png" itemprop="image"><title>Google</title><script nonce="X3uVUckHhbNuBkpOSyZdCQ==">(function(){window.google={kEI:'XPafW_C2OZGb_Qaq3bqwDQ',kEXPI:
 
 
 ==========
@@ -105,7 +112,7 @@ Copy and paste the output below, but not the whole thing!  Just copy up to the p
 
 Write the command you used below.  Also copy and paste the output below.
 ----------
-
+curl -o google.txt https://www.google.com
 
 
 ==========
@@ -113,7 +120,7 @@ Write the command you used below.  Also copy and paste the output below.
 
 Write the command you used to determine your directory.  Also, copy and paste the output below.
 ----------
-
+pwd
 
 
 ==========
@@ -121,7 +128,7 @@ Write the command you used to determine your directory.  Also, copy and paste th
 
 Write the command that you used to change to your home directory.  If you were already in your home directory, write the command that you *would* have used to change to it!
 ----------
-
+cd ~
 
 
 ==========
@@ -137,7 +144,7 @@ Use ls to verify that it downloaded.
 
 Write down the command that you used to download the file below.  Additionally, write the output of the command below.
 ----------
-
+curl - mtec1002-lab-02.zip http://foureyes.github.io/mtec1002-spring2014/labs/02/mtec1002-lab-02.zip
 
 
 ==========
@@ -145,7 +152,7 @@ Write down the command that you used to download the file below.  Additionally, 
 
 Write down the command that you used to uncompress the file.
 ----------
-
+unzip mtec1002-lab-02.zip
 
 
 ==========
@@ -153,6 +160,7 @@ Write down the command that you used to uncompress the file.
 
 Copy and paste the output below.
 ----------
+
 
 
 
@@ -176,7 +184,8 @@ List the files in the directory you're currently in (which should be stuff).
 
 Copy and paste the output below.
 ----------
-
+ent-v314-017:~ student$ echo "hi" > hello.txt
+ent-v314-017:~ student$ 
 
 
 ==========
@@ -188,7 +197,8 @@ List the files in the directory you're currently in (which should be home).
 
 Copy and paste the output below.
 ----------
-
+a stuff
+a stuff/more-stuff
 
 
 ==========
@@ -198,7 +208,8 @@ $ tar -cvf stuff.tar stuff
 
 Copy and paste the output below.
 ----------
-
+a stuff
+a stuff/more-stuff
 
 
 ==========
@@ -206,6 +217,17 @@ Copy and paste the output below.
 
 Copy and paste the output below. (It should contain stuff.tar)
 ----------
+Adlm			Movies			isus
+Adobe			Music			key.pem
+Applications		New Unity Project	more-stuff
+DANK			Pictures		mtec1002
+Desktop			Public			mtec1003-lab-03
+Documents		QLData			mtec1003-lab-03.tar.gz
+Downloads		S			pymel.log
+E			Things			stuff
+Library			cert.pem		stuff.tar
+M			hello.txt		testjp.zip.tar
+MPLABXProjects		ipe.properties		xgen
 
 
 
@@ -216,6 +238,17 @@ gzip stuff.tar
 
 List your files again.... you should have a new file with a .gz extension.  Copy and paste the output of your this below.
 ----------
+Adlm			Movies			isus
+Adobe			Music			key.pem
+Applications		New Unity Project	more-stuff
+DANK			Pictures		mtec1002
+Desktop			Public			mtec1003-lab-03
+Documents		QLData			mtec1003-lab-03.tar.gz
+Downloads		S			pymel.log
+E			Things			stuff
+Library			cert.pem		stuff.tar.gz
+M			hello.txt		testjp.zip.tar
+MPLABXProjects		ipe.properties		xgen
 
 
 
@@ -239,14 +272,37 @@ $ tar -xvf stuff.tar.gz
 
 List the files.  Copy and paste the output below (the folder, stuff, should be there).
 ----------
-
+Adlm			Movies			isus
+Adobe			Music			key.pem
+Applications		New Unity Project	more-stuff
+DANK			Pictures		mtec1002
+Desktop			Public			mtec1003-lab-03
+Documents		QLData			mtec1003-lab-03.tar.gz
+Downloads		S			pymel.log
+E			Things			stuff
+Library			cert.pem		stuff.tar.gz
+M			hello.txt		testjp.zip.tar
+MPLABXProjects		ipe.properties		xgen
+ent-v314-017:~ student$ mv stuff.tar.gz mtec1002-lab-02 
+ent-v314-017:~ student$ ls
+Adlm			Movies			isus
+Adobe			Music			key.pem
+Applications		New Unity Project	more-stuff
+DANK			Pictures		mtec1002
+Desktop			Public			mtec1002-lab-02
+Documents		QLData			mtec1003-lab-03
+Downloads		S			mtec1003-lab-03.tar.gz
+E			Things			pymel.log
+Library			cert.pem		stuff
+M			hello.txt		testjp.zip.tar
+MPLABXProjects		ipe.properties		xgen
 
 
 ==========
 24. Go back to your home directory
 [No output]
 ----------
-
+cd ~
 
 
 ==========
@@ -258,9 +314,34 @@ REMEMBER to use the -o flag and specifiy a filenmae that ends in .tar.gz
 
 Write out the commands that you used to do this.
 ----------
-
+curl -o metec.tar.gz http://foureyes.github.io/mtec1002/labs/02/secret.tar.gz
+tar -xvf metec.tar.gz
 
 
 ==========
 26. How many files were in the archive.  What were their names?  Write out your answers below.
 ----------
+Adlm			Movies			isus
+Adobe			Music			key.pem
+Applications		New Unity Project	more-stuff
+DANK			Pictures		mtec1002
+Desktop			Public			mtec1003-lab-03
+Documents		QLData			mtec1003-lab-03.tar.gz
+Downloads		S			pymel.log
+E			Things			stuff
+Library			cert.pem		stuff.tar.gz
+M			hello.txt		testjp.zip.tar
+MPLABXProjects		ipe.properties		xgen
+ent-v314-017:~ student$ mv stuff.tar.gz mtec1002-lab-02 
+ent-v314-017:~ student$ ls
+Adlm			Movies			isus
+Adobe			Music			key.pem
+Applications		New Unity Project	more-stuff
+DANK			Pictures		mtec1002
+Desktop			Public			mtec1002-lab-02
+Documents		QLData			mtec1003-lab-03
+Downloads		S			mtec1003-lab-03.tar.gz
+E			Things			pymel.log
+Library			cert.pem		stuff
+M			hello.txt		testjp.zip.tar
+MPLABXProjects		ipe.properties		xgen
